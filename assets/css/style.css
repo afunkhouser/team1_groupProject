@@ -1,0 +1,12 @@
+nav {
+    align-items: center;
+    
+    
+}
+
+.nav-list {
+    display: inline;
+    padding:5px; 
+    background-color: rgb(201, 193, 193);
+}
+
