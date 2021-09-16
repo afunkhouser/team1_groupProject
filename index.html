@@ -6,77 +6,136 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project 1</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="assets\css\style.css">
 </head>
 <body>
-    <nav class="navbar box is-warning">
-        <h1>Project 1 Title</h1>
-        <a class="active" href="#home">Home</a>
-        <a href="#tasks">Tasks</a>
-        <a href="#calendar">Calendar</a>
-    </nav>
-
-    
-    <div class="columns box">
-        <aside class="column is-two-fifths has-background-success">
-            <div class="control is-info">
-                <div class="select">
-                  <select>
-                    <option>Select Company</option>
-                    <option>Amazon</option>
-                    <option>Microsoft</option>
-                    <option>Google</option>
-                    <option>Twitter</option>
-                    <option>Salesforce</option>
-                  </select>
-                </div>
-                <button class="button is-primary is-info">Submit</button>
-              </div>
-            
-
-        <form class="check-box">
-            <label class="checkbox is-info">
-                <input type="checkbox">
-                    Resume/CV Submitted 
-                </label><br>
-                <label class="checkbox">
-                    <input type="checkbox">
-                    Contacted Back
-                </label><br>
-                <label class="checkbox">
-                    <input type="checkbox">
-                    Interviewed
-                </label>
-            </form>
-            <br>
-        <button class="button is-info">Add new job</button>
-        <button class="button is-info">Add new job</button>
-        
-            
-        <div class="file is-dark">
-            <label class="file-label">
-            <input class="file-input" type="file" name="resume">
-                  <span class="file-cta">
-                    <span class="file-icon">
-                      <i class="fas fa-upload"></i>
-                    </span>
-                    <span class="file-label">
-                      Attach Resume
-                    </span>
-                  </span>
-            </label>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item"></a>
+            <img src="images\mint-ice-cream-vector-clipart-cartoon-waffle-flavor-123601844.jpg" width="112" height="28">
+          </a>
+      
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
         </div>
-            <hr>
-        
-        </aside>
-        <container class="column is-one-fifth"></container>
-        <container class="column is-two-fifths has-background-info">
-            <h2>Here are the results!</h2>
-
-            
-        </container>
-    </div>
-
+      
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item">
+              Home
+            </a>
+      
+            <a class="navbar-item">
+              Calendar
+            </a>
+      
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link">
+                More
+              </a>
+      
+              <div class="navbar-dropdown">
+                <a class="navbar-item">
+                  About
+                </a>
+                <a class="navbar-item">
+                  Jobs
+                </a>
+                <a class="navbar-item">
+                  Contact
+                </a>
+                <hr class="navbar-divider">
+                <a class="navbar-item">
+                  Report an issue
+                </a>
+              </div>
+            </div>
+          </div>
+      
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="buttons">
+                <a class="button is-success">
+                  <strong>Sign up</strong>
+                </a>
+                <a class="button is-light">
+                  Log in
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+<!--change these columns to tiles. reference the tiles page in bulma-->
     
+<div class="tile is-ancestor">
+  <div class="tile is-4 is-vertical is-parent">
+    <div class="tile is-child box notification is-success">
+      <div class="control is-info">
+          <div class="select">
+            <select>
+              <option>Select Company</option>
+              <option>Amazon</option>
+              <option>Microsoft</option>
+              <option>Google</option>
+              <option>Twitter</option>
+              <option>Salesforce</option>
+            </select>
+          </div>
+          <button class="button is-primary is-info">Submit</button>
+        </div>
+        <br>
+        <form class="check-box">
+          <label class="checkbox is-info">
+              <input type="checkbox">
+                  Resume/CV Submitted 
+              </label><br>
+              <label class="checkbox">
+                  <input type="checkbox">
+                  Contacted Back
+              </label><br>
+              <label class="checkbox">
+                  <input type="checkbox">
+                  Interviewed
+              </label>
+          </form>
+          <br>
+          <button class="button is-info">Add new job</button>
+    </div>
+    
+    <div class="tile is-child box notification is-success">
+      <div class="file is-grey-light">
+          <label class="file-label">
+          <input class="file-input" type="file" name="resume">
+                <span class="file-cta">
+                  <span class="file-icon">
+                    <i class="fas fa-upload"></i>
+                  </span>
+                  <span class="file-label">
+                    Attach Resume
+                  </span>
+                </span>
+          </label>
+      </div>
+    </div>
+  </div>
+  <div class="tile is-parent">
+    <div class="tile is-child box notification is-info">
+      <h1>Here are the results!</h1>
+    </div>
+  </div>
+</div>
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+          <p>
+            <strong>Project 1</strong> by Andy, Alissa, Daniel, Korey, Lateah
+            
+          </p>
+        </div>
+      </footer>
 </body>
 </html>
