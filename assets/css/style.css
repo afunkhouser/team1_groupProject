@@ -1,12 +1,8 @@
-nav {
-    align-items: center;
-    
-    
+.hero {
+    background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzjAFxBYUVcyFNo-qH39_aKDwjH1GfNR9P_g&usqp=CAU");
+    background-position:center;
+    width:1400px;
+    height:700px;
 }
 
-.nav-list {
-    display: inline;
-    padding:5px; 
-    background-color: rgb(201, 193, 193);
-}
 
