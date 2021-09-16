@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +11,7 @@
         <div class="navbar-brand">
           <a class="navbar-item"></a>
             <img src="images\mint-ice-cream-vector-clipart-cartoon-waffle-flavor-123601844.jpg" width="112" height="28">
-          </a>
+          
       
           <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
             <span aria-hidden="true"></span>
@@ -69,73 +67,88 @@
           </div>
         </div>
       </nav>
-<!--change these columns to tiles. reference the tiles page in bulma-->
-    
-<div class="tile is-ancestor">
-  <div class="tile is-4 is-vertical is-parent">
-    <div class="tile is-child box notification is-success">
-      <div class="control is-info">
-          <div class="select">
-            <select>
-              <option>Select Company</option>
-              <option>Amazon</option>
-              <option>Microsoft</option>
-              <option>Google</option>
-              <option>Twitter</option>
-              <option>Salesforce</option>
-            </select>
-          </div>
-          <button class="button is-primary is-info">Submit</button>
-        </div>
-        <br>
-        <form class="check-box">
-          <label class="checkbox is-info">
-              <input type="checkbox">
-                  Resume/CV Submitted 
-              </label><br>
-              <label class="checkbox">
-                  <input type="checkbox">
-                  Contacted Back
-              </label><br>
-              <label class="checkbox">
-                  <input type="checkbox">
-                  Interviewed
-              </label>
-          </form>
-          <br>
-          <button class="button is-info">Add new job</button>
-    </div>
-    
-    <div class="tile is-child box notification is-success">
-      <div class="file is-grey-light">
-          <label class="file-label">
-          <input class="file-input" type="file" name="resume">
-                <span class="file-cta">
-                  <span class="file-icon">
-                    <i class="fas fa-upload"></i>
-                  </span>
-                  <span class="file-label">
-                    Attach Resume
-                  </span>
-                </span>
-          </label>
-      </div>
-    </div>
-  </div>
-  <div class="tile is-parent">
-    <div class="tile is-child box notification is-info">
-      <h1>Here are the results!</h1>
-    </div>
-  </div>
-</div>
 
-    <footer class="footer">
-        <div class="content has-text-centered">
-          <p>
-            <strong>Project 1</strong> by Andy, Alissa, Daniel, Korey, Lateah
-            
-          </p>
+      <!--HERO STARTS HERE-->
+
+    <section class="hero is-fullheight">
+        <div class="hero-body">
+            <div class="tile is-ancestor">
+                <div class="tile is-4 is-vertical is-parent">
+                  <div class="tile is-child box notification is-success">
+                    <div class="control is-info">
+                        <div class="select">
+                          <select>
+                            <option>Select Company</option>
+                            <option>Amazon</option>
+                            <option>Microsoft</option>
+                            <option>Google</option>
+                            <option>Twitter</option>
+                            <option>Salesforce</option>
+                          </select>
+                        </div>
+                        <button class="button is-primary is-info">Submit</button>
+                      </div>
+                      <br>
+                      
+                        <button class="button is-info">Add New Job</button>
+                        <button class="button is-info">Search Open Positions</button>
+                  </div>
+                  
+                  <div class="tile is-child box notification is-success">
+                    <div class="file is-grey-light">
+                        <label class="file-label">
+                        <input class="file-input" type="file" name="resume">
+                              <span class="file-cta">
+                                <span class="file-icon">
+                                  <i class="fas fa-upload"></i>
+                                </span>
+                                
+                                <span class="file-label">
+                                  Attach Resume
+                                </span>
+                              </span>
+                        </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="tile is-parent">
+                  <div class="tile is-child box notification is-info">
+                    <h1>Here are the results!</h1><br><br><br><br><br><br>
+                    <form class="check-box">
+                        <label class="checkbox is-info">
+                            <input type="checkbox">
+                                Resume/CV Submitted 
+                            </label><br>
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                Contacted Back
+                            </label><br>
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                Interviewed
+                            </label>
+                        </form>
+                      <div class="control">
+                      <textarea class="textarea is-focused" placeholder="Notes"></textarea>
+                    </div> 
+                    
+                  </div>
+                </div>
+              </div>
         </div>
-      </footer>
-</body>
-</html>
+
+        <footer class="footer">
+            <div class="content has-text-centered">
+               <p>
+                <strong>Project 1</strong> by Andy, Alissa, Daniel, Korey, Lateah <br>
+                add github link here
+                    
+              </p>
+            </div>
+          </footer>
+
+    </section>
+
+    
+
+</body></html>
