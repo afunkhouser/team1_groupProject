@@ -1,4 +1,6 @@
 
+
+
 .hero {
     background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzjAFxBYUVcyFNo-qH39_aKDwjH1GfNR9P_g&usqp=CAU");
     background-position:center;
@@ -8,3 +10,16 @@
 }
 
 
+img {
+    padding-bottom: 20%;
+}
+
+#goBtn {
+    margin-left: 3%;
+}
+
+#custom-text {
+    margin-left: 2%;
+    color: hsl(204, 86%, 53%);
+    font-size: small;
+}

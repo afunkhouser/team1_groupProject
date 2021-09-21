@@ -101,3 +101,7 @@ html, body, textarea, input {
     height:700px;
     margin-left: 1%;
 }
+
+img {
+    padding-bottom: 20%;
+}
