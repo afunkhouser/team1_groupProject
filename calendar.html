@@ -4,7 +4,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Calendar</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <link rel="stylesheet" href="assets\css\style.css">
+    <link rel="stylesheet" href="assets\css\calendar.css">
+    <script src="calendar.js"></script>
   </head>
   <body>
     <nav class="navbar" role="navigation" aria-label="main navigation">
@@ -39,17 +40,50 @@
     <div class="hero-body">
         
     
-        <div class="tile is-ancestor">
-            <div class="tile notification is-4 is-success">
-              Daily caledar appears here with API and JS <br><br><br><br>
-            </div><br>
-            <div class="tile notification is-info">
-              Monthly caledar appears here with API and JS <br><br><br><br><br>
+        <div class="tile is-ancestor notification is-info">
+           
+            <div class="tile notification is-white">
+             <!--calendar mark up below--> 
+              <div id="cal-wrap">
+                <!-- [PERIOD SELECTOR] -->
+                <div id="cal-date">
+                  <select id="cal-mth"></select>
+                  <select id="cal-yr"></select>
+                  <input id="cal-set" type="button" value="SET"/>
+                </div>
+          
+                <!-- [CALENDAR] -->
+                <div id="cal-container"></div>
+          
+                <!-- [EVENT] -->
+                <div id="cal-event"></div>
+              </div>
             </div>
+            <article class="media">
+              <figure class="media-left">
+                
+              </figure>
+              <div class="media-content">
+                <div class="field">
+                  <p class="control">
+                    <textarea class="textarea" placeholder="Notes"></textarea>
+                  </p>
+                </div>
+                <nav class="level">
+                  <div class="level-left">
+                    <div class="level-item">
+                      <a class="button is-success">Save</a>
+                    </div>
+                  </div>
+                  
+                </nav>
+              </div>
+            </article>
+        
           </div>
     
-     </div>
-    </section>
+    </div>
+</section>
 
     <footer class="footer">
         <div class="content has-text-centered">
