@@ -1,4 +1,3 @@
-
 //JOB SEARCH
 var jobs = document.getElementById("jobTitle");
 var zipCode = document.getElementById("zipCode");
@@ -40,9 +39,13 @@ function jobSearch() {
       for (let i = 0; i < searchResults.length; i++) {
         const element = searchResults[i];
         console.log(element);
+        var saveJob = document.createElement("button");
+        saveJob.setAttribute("class", "button is-info");
 
         var cardContent = document.createElement("div");
         cardContent.setAttribute("class", "content");
+        cardContent.setAttribute("class", "box");
+
         card.append(cardContent);
         var posTitle = document.createElement("p");
         // // add class "card-header-title" to header
@@ -60,42 +63,46 @@ function jobSearch() {
           "Department Name: " + element.MatchedObjectDescriptor.DepartmentName;
 
         link.textContent = element.MatchedObjectDescriptor.PositionURI;
-        link.setAttribute("href", link);
-        cardContent.append(posTitle, dptName, link);
+        link.setAttribute("href", element.MatchedObjectDescriptor.PositionURI);
+        cardContent.append(saveJob, posTitle, dptName, link);
       }
-
-      //CREATE CARD FOR EACH AVAILABLE POSITION
-      // for (i = 0; i < searchResults.length; i++) {
-      //   console.log(searchResults[i].MatchedObjectId);
-      //   //gets the div with Bulma specified class
-      //   var card = document.getElementById("card");
-      //   var cardContent = document.createElement("div");
-      //   //creates element for position title
-      //   var posTitle = document.createElement("p");
-      //   // add class "card-header-title" to header
-
-      //   //create element for department name
-      //   var dptName = document.createElement("p");
-      //   //create element for href to apply
-      //   var link = document.createElement("a");
-      //   //create h1 container to fit all elements
-      //   cardContent.setAttribute("class", "content");
-      //   card.append(cardContent);
-
-      //   posTitle.textContent =
-      //     "Position title" + searchResult[i].MatchedObjectDescriptor;
-
-      //   dptName.textContent =
-      //     "Department Name" +
-      //     data.SearchResult.SearchResultItems.MatchedObjectDescriptor;
-
-      //   link.textContent =
-      //     "href =" +
-      //     data.SearchResult.SearchResultItems.MatchedObjectDescriptor
-      //       .PositionURI;
-
-      //   cardContent.append(posTitle, dptName, link);
-      // }
     });
 }
 
+var googleSearch = document.querySelector(".googleSearch");
+var button = document.querySelector("#searchButton");
+var title = document.querySelector(".title");
+var linked = document.querySelector(".link");
+var description = document.querySelector(".description");
+button.addEventListener("click", function () {
+  fetch(
+    "https://google-search3.p.rapidapi.com/api/v1/search/q=" +
+      googleSearch.value +
+      "",
+    {
+      method: "GET",
+      headers: {
+        "x-user-agent": "desktop",
+        "x-rapidapi-host": "google-search3.p.rapidapi.com",
+        "x-rapidapi-key": "1facf0ba13msh50a08ee6bc71163p150cc9jsnef4d9487f09d",
+      },
+    }
+  )
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      //first result
+      //var string = data["results"][1]["additional_links"][0]["href"];
+      //var result = string.link("string.innerHTML")
+      //console.log(result)
+      //linked.innerHTML = result;
+      var a = document.createElement("a");
+      a.href = data["results"][1]["additional_links"][0]["href"];
+      linked.innerHTML = a.href;
+      a.setAttribute("href", a.href);
+      var titleValue = data["results"][1]["title"];
+      title.innerHTML = titleValue;
+      var descriptionValue = data["results"][1]["description"];
+      description.innerHTML = descriptionValue;
+    });
+});
