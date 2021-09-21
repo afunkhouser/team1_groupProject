@@ -43,12 +43,13 @@
             <div class="tile is-4 is-vertical is-parent">
                 <div class="tile is-child box notification is-success">
                   <div class="control is-info">
-                    <input class="input is-success" type="text" placeholder="Job title">
+                    <input class="input is-success" id="jobTitle"type="text" placeholder="Job title">
                       <br><br>
-                      <input class="input is-success" type="text" placeholder="Zip Code"><br><br>
-                      OR<br><br>
-                      <input class="input is-success" type="text" placeholder="Enter a company name"><br><br>
-                      <button class="button is-primary is-info">Search</button><br>
+                      <input class="input is-success" id="zipCode" type="text" placeholder="Zip Code"><br><br>
+                      <button class="button is-primary is-info" id="searchBtn">Search</button><br>
+                      <hr></hr>
+                      <input class="input is-success googleSearch" type="text" placeholder="Enter a company name"><br><br>
+                      <button class="button is-primary is-info" id="searchButton">Search</button><br>
                       
                     </div>
                 </div>
@@ -67,9 +68,14 @@
               </div>
               <div class="tile is-parent">
                 <div class="tile is-child box notification is-info">
-                    <div class="control">
-                    <textarea class="textarea is-focused" placeholder=""></textarea>
+                  <h1>Jobs Found</h1>
+                    <div class="card" id="card">
+
                   </div> <br>
+                  <div class="googleSearch box">
+                    <p class="title"></p>
+                    <p class="link"></p>
+                    <p class="description"></p></div>
                   <div>
                   <div class="tile is-child box notification is-grey">
                     
@@ -127,5 +133,6 @@
       </div>
   </div>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
