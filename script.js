@@ -1,3 +1,4 @@
+
 //JOB SEARCH
 var jobs = document.getElementById("jobTitle");
 var zipCode = document.getElementById("zipCode");
@@ -97,3 +98,4 @@ function jobSearch() {
       // }
     });
 }
+
