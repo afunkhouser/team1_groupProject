@@ -2,6 +2,7 @@
 var jobs = document.getElementById("jobTitle");
 var zipCode = document.getElementById("zipCode");
 var srchBtn = document.getElementById("searchBtn");
+var clearBtn = document.querySelector(".clearBtn")
 
 srchBtn.addEventListener("click", jobSearch);
 
@@ -40,7 +41,8 @@ function jobSearch() {
         const element = searchResults[i];
         console.log(element);
         var saveJob = document.createElement("button");
-        saveJob.setAttribute("class", "button is-info");
+        saveJob.setAttribute("class", "button is-info save-btn");
+        saveJob.textContent = 'Save';
 
         var cardContent = document.createElement("div");
         cardContent.setAttribute("class", "content");
@@ -66,6 +68,26 @@ function jobSearch() {
         link.setAttribute("href", element.MatchedObjectDescriptor.PositionURI);
         cardContent.append(saveJob, posTitle, dptName, link);
       }
+      
+      var jobBtn = document.querySelectorAll('.save-btn');
+      var savedJobs = JSON.parse(window.localStorage.getItem('saved-jobs')) || [];
+
+        
+      if( jobBtn != null) {
+        for(var i=0; i<jobBtn.length; i++) {
+          jobBtn[i].addEventListener('click', function(event) {
+            var newJob = event.target.nextElementSibling.textContent
+            var addedJob = {
+              job: newJob,
+              resume: true,
+              interview: false
+            } 
+            savedJobs.push(addedJob);
+            console.log(newJob)
+            window.localStorage.setItem('saved-jobs', JSON.stringify(savedJobs))
+          })
+        }
+      }
     });
 }
 
@@ -90,19 +112,42 @@ button.addEventListener("click", function () {
   )
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
-      //first result
-      //var string = data["results"][1]["additional_links"][0]["href"];
-      //var result = string.link("string.innerHTML")
-      //console.log(result)
-      //linked.innerHTML = result;
+      //console.log(data);
       var a = document.createElement("a");
-      a.href = data["results"][1]["additional_links"][0]["href"];
-      linked.innerHTML = a.href;
-      a.setAttribute("href", a.href);
+      a.textContent = data["results"][1]["link"];
+      a.setAttribute("href", data["results"][1]["link"]);
+      linked.append(a);
       var titleValue = data["results"][1]["title"];
       title.innerHTML = titleValue;
       var descriptionValue = data["results"][1]["description"];
       description.innerHTML = descriptionValue;
     });
+});
+
+function displayeSavedJobs() {
+  var savedJobs = JSON.parse(window.localStorage.getItem('saved-jobs')) || [];
+
+  savedJobs.forEach(function(savedJob){
+    var liTag = document.createElement('li');
+    liTag.textContent = savedJob.job
+    //var checkBox = document.createElement('input')
+    //checkBox.setAttribute('type', 'checkbox')
+
+    var olEl = document.getElementById('saved-jobs')
+    //liTag.appendChild(checkBox)
+    olEl.appendChild(liTag)
+
+    //if(savedJob.resume == true) {
+      
+    //}
+
+  })
+}
+
+displayeSavedJobs();
+
+//refresh page after clear btn is clicked 
+clearBtn.addEventListener("click", function () {
+  localStorage.clear();
+
 });
