@@ -1,5 +1,5 @@
 
-When applying to multiple jobs it is often easy to forget which step of the process you are in with each company you've applied to. with "Project name" keeping track of your inerviews and resumes has just become a whole lot easier! "Project name" is an organizational tool that will allow you to create a list of jobs that you have applied to with additional checkboxes to keep track of the resume you used for that job listing, if the emplyer as responded to your application, if you have an interview scheduled, ect. "project name" also includes features to help you stand out from other applicants with our reminder features that help you remember your interview times, dates, and to send a thank you email shortly after!
+When applying to multiple jobs it is often easy to forget which step of the process you are in with each company you've applied to. with careerCone keeping track of your inerviews and resumes has just become a whole lot easier! careerCone is an organizational tool that will allow you to create a list of jobs that you have applied to with added features to keep track of the resume you used for that job listing 
 
 
 

@@ -56,11 +56,9 @@
                 
                 <div class="tile is-child box notification is-success">
                   <div class="file is-grey-light">
-                    <div class="select is-link">
-                      <select>
-                        <option>Saved Employers</option>
-                      </select>  
-                    </div><br><br><button id="goBtn" class="button is-primary is-info">Go!</button>
+                     <!--refresh page to see local storage items render-->
+                      <ol id="saved-jobs" class="notification is-info"></ol> 
+                      <button class="clearBtn">Clear List</button>
                   </div>
                 </div>
               </div>
@@ -134,6 +132,5 @@
   </div>
   </footer>
   <script src="script.js"></script>
-  <script src="upload.js"></script>
 </body>
 </html>
