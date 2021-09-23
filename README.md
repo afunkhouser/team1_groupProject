@@ -1,7 +1,32 @@
+## Project Title: CareerCone
+careerCone is an organizational web tool that will allow you to create a list of jobs that you have applied to with added features to keep track of the resume you used for that job listing 
 
-When applying to multiple jobs it is often easy to forget which step of the process you are in with each company you've applied to. with careerCone keeping track of your inerviews and resumes has just become a whole lot easier! careerCone is an organizational tool that will allow you to create a list of jobs that you have applied to with added features to keep track of the resume you used for that job listing 
+## Motivation
+When applying to multiple jobs it is often easy to forget which step of the process you are in with different companies. With careerCone keeping track of your job applications, interviews and resumes  is a whole lot easier! 
 
+## Build Status 
+The notes are currently not functional but we hope to get them to local storage and be rechievable alongside the resumes, position and company
+We are also looking into adding more functionality to the progress bar which would be responsive to button clicks and uploading of documents
+We would also like to make the calendar more responsive to interview appointments and reminders 
 
+## code used 
+HTML 
+CSS
+JAvascript 
+(we also used BULMA)
+
+## Screenshots 
+[insert progress bar screenshot]
+[insert website screenshot]
+[insert calendar schreenshot]
+
+## Features
+-Track application progress through 
+-Log interviews in Calendar 
+-progress bar shows where you are in the process of the job application process
+-Upload and Save Resume in local storage on computer where it can be retrieved and edited for new job applications
+-Search for job positions through our site and save the positions within these companies that you want to apply to
+-Go back a step in the process using the previous button on the progress bar
 
 ## User Story
 
@@ -16,3 +41,20 @@ WHEN I view the application steps
 THEN I am presented with the resume submitted, if I have been contacted by the employer, scheduled interviews, and follow up emails
 WHEN I view the calendar
 THEN I am presented with a customized schedule of meeting times and reminders that I have set for myself
+
+## API's used 
+Google Search API
+USA Jobs API
+
+## HOW TO
+The website is used from left, right and bottom
+
+## CREDITS
+Alison Funkhouser
+Andy Chen 
+Daniel Diez
+Korey Cheshire
+Lateah Holmes
+
+## Liscense 
+
