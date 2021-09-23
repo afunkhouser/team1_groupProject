@@ -23,3 +23,7 @@ img {
     color: hsl(204, 86%, 53%);
     font-size: small;
 }
+
+.clearBtn {
+    margin-left: 3%;
+}
