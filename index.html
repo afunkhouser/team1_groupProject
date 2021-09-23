@@ -3,6 +3,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Project</title>
+  <link rel="stylesheet" href="project bar styles.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
   <link rel="stylesheet" href="assets\css\style.css">
 </head>
@@ -73,18 +74,39 @@
                     <p class="link"></p>
                     <p class="description"></p></div>
                   <div>
-                  <div class="tile is-child box notification is-grey">
-                    
-                    
-                    
-                    
-                    <button class="button is-success">-----------------------------------------------------------PROGRESS BAR ---------------------------------------------------------------</button>
-                    
-                    
-                    
-                    
-                    
-                    
+                  <div id ="progressContainer" class="tile is-child box notification is-grey">
+                    <!--Progress Bar-->
+                    <div class="container">
+
+                      <div id="stepProgressBar">
+                          <div class="step"> 
+                              <p class="step-text">Apply/Submit Resume</p>
+                              <div class="bullet">&#10003</div>
+                          </div>
+                           <div class="step">
+                              <p class="step-text">Hear Back/ Set Interview Date</p>
+                              <div class="bullet">&#10003</div>
+                          </div>
+              
+                           <div class="step">
+                              <p class="step-text">Interview Process</p>
+                              <div class="bullet">&#10003</div>
+                          </div>
+                          
+                           <div class="step">
+                              <p class="step-text">Call Back/recieve Response</p>
+                              <div class="bullet">&#10003</div>
+                           </div>
+                      </div>
+                  </div>
+                  <div id="main-buttons">
+                      <br><p id="content">Step Number 1</p><br>
+                      <button class ="button is-info" id="previousBtn" disabled>Previous</button>
+                      <button class ="button is-info" id="nextBtn">Next</button>
+                      <button class ="button is-success" id="finishBtn" disabled >Finish</button>
+                  </div>
+              </div>
+                  
                     <br><br>
                         <article class="media">
                           <figure class="media-left">
@@ -140,6 +162,7 @@
       </div>
   </div>
   </footer>
+  <script src="pb js.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
